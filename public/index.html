@@ -3,6 +3,7 @@
   <head>
     <title>Unblocker</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="favicon" href="favicon.ico" />
     <script src="baremux/index.js" defer></script>
     <script src="epoxy/index.js" defer></script>
     <script src="uv/uv.bundle.js" defer></script>
@@ -12,15 +13,23 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <form id="uv-form">
-      <input
-        id="uv-search-engine"
-        value="https://duckduckgo.com/?t=h_&q=%s&ia=web"
-        type="hidden"
-      />
-      <input spellcheck="off" autocorrect="off" id="uv-address" type="text" placeholder="Search" />
-      <img src="https://duckduckgo.com/favicon.ico" id="uv-site-icon"/>
-    </form>
+    <div id="uv-container">
+      <h1>VOID</h1>
+      <form id="uv-form">
+        <input
+            id="uv-search-engine"
+            value="https://duckduckgo.com/?t=h_&q=%s&ia=web"
+            type="hidden"
+            />
+        <input spellcheck="off" autocorrect="off" id="uv-address" type="text" placeholder="Search" />
+        <img src="https://duckduckgo.com/favicon.ico" id="uv-site-icon"draggable="false" />
+      </form>
+    </div>
+    <div id="uv-browser-controls">
+      <img src="assets/icons/home.svg" draggable="false" id="uv-button-home" />
+      <img src="assets/icons/left.svg" draggable="false" id="uv-button-left" style="display: none"/>
+      <img src="assets/icons/right.svg" draggable="false" id="uv-button-right" style="display: none"/>
+    </div>
     <iframe style="display: none;" id="uv-frame"></iframe>
   </body>
 </html>
